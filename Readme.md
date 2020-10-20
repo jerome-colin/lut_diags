@@ -7,17 +7,17 @@ Beta for testing
 A Collection is primarily a dictionary of LUT objects referenced by their wavelength, with additional meta-data. The creation of the Collection is
 agnostic to the actual content of 'path', and gathers meta-data and binary values automatically.
 
-###Public methods:
+### Public methods:
 - load: create a collection of LUT objects as dict in self.luts. This method can be called on creation of the Collection by passing 'var=x' where 'x' could be eg. 'refl' or 'albedo', etc...
 
-###Attributes:
+### Attributes:
 - sensor (str): name of sensor found from filename
 - aerosol (str): name of aerosol type from filename
 - bands (numpy.array): vector of wavelengths from filename
 - prop (str): prop from filename
 - luts (dict): dictionary of Lut objects referenced by their wavelength  
 
-###Usage example:
+### Usage example:
 
 `import Luts.Collection as lt`
 
