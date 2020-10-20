@@ -14,8 +14,9 @@ import Luts.utilities as utl
 
 class Collection:
     """
-    A Collection is a dictionary of LUT objects referenced by their wavelength. The creation of the Collection is
-    agnostic to the actual content of 'path', and gathers meta-data and binary values automatically.
+    A Collection is primarily a dictionary of LUT objects referenced by their wavelength, with additional meta-data.
+    The creation of the Collection is agnostic to the actual content of 'path', and gathers meta-data and binary
+    values automatically.
 
     Public methods:
         load: create a collection of LUT objects as dict in self.luts
@@ -25,6 +26,7 @@ class Collection:
         aerosol (str): name of aerosol type from filename
         bands (numpy.array): vector of wavelengths from filename
         prop (str): prop from filename
+        luts (dict): dictionary of Lut objects referenced by their wavelength
 
     Usage example:
         venus_refl = Collection("tests/VENUS_zerodeuxSansAbsorption", var='refl')
