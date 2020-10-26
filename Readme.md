@@ -4,11 +4,11 @@ Beta for testing
 
 ## Luts.Collection
 
-A Collection is primarily a dictionary of LUT objects referenced by their wavelength, with additional meta-data. The creation of the Collection is
+Superclass for TxtCollection (from SOS wrapper) and HdrCollection (CS format). A Collection is primarily a dictionary of LUT objects referenced by their wavelength, with additional meta-data. The creation of the Collection is
 agnostic to the actual content of 'path', and gathers meta-data and binary values automatically.
 
 ### Public methods:
-- load: create a collection of LUT objects as dict in self.luts. This method can be called on creation of the Collection by passing 'var=x' where 'x' could be eg. 'refl' or 'albedo', etc...
+none, all private
 
 ### Attributes:
 - sensor (str): name of sensor found from filename
@@ -23,7 +23,7 @@ agnostic to the actual content of 'path', and gathers meta-data and binary value
 
 Create a collection of Luts for 'refl':
 
-`venus_refl = lt.Collection("tests/VENUS_zerodeuxSansAbsorption", var='refl')`
+`venus_refl = lt.TxtCollection("tests/VENUS_zerodeuxSansAbsorption", var='refl')`
 
 Show available bands :
 
